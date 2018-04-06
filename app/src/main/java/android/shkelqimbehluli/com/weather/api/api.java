@@ -20,6 +20,14 @@ public class api {
         return URL.toString();
     }
 
+    public static String apiGPSRequest(String lat,String lon){
+
+        StringBuilder URL = new StringBuilder(API_LINK);
+        URL.append(String.format("?lat=%s&?lon=%s&appid=%s",lat,lon,API_Key));
+        return URL.toString();
+    }
+
+
     public static String unixTimeStampToDateTime(double unixTimeStamp){
         DateFormat dateFormat = new SimpleDateFormat();
         Date date = new Date();
