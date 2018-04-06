@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //Shkelqim Behluli
     TextView txtCity,txtLastUpdate,txtDescription,txtHumidity,txtTime,txtCelsius;
     ImageView imageView;
     LocationManager locationManager;
