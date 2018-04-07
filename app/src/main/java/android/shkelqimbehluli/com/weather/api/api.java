@@ -11,19 +11,19 @@ import java.util.Date;
 public class api {
 
     public static final String API_Key="e7c75ebafb8910969cadcaaa39517929";
-    public static final String API_LINK="api.openweathermap.org/data/2.5/weather";
+    public static final String API_LINK="http://api.openweathermap.org/data/2.5/weather";
 
     public static String apiRequest(String locationID){
 
         StringBuilder URL = new StringBuilder(API_LINK);
-        URL.append(String.format("?id=%s&appid=%s",locationID,API_Key));
+        URL.append(String.format("?id=%s&appid=%s&units=metric",locationID,API_Key));
         return URL.toString();
     }
 
     public static String apiGPSRequest(String lat,String lon){
 
         StringBuilder URL = new StringBuilder(API_LINK);
-        URL.append(String.format("?lat=%s&?lon=%s&appid=%s",lat,lon,API_Key));
+        URL.append(String.format("?lat=%s&lon=%s&appid=%s&units=metric",lat,lon,API_Key));
         return URL.toString();
     }
 
